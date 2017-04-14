@@ -1,0 +1,284 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: rgb(47, 47, 47);
+}
+
+a{
+  text-decoration: none;
+}
+
+li{
+  list-style: none;
+}
+
+body{
+  background-color: rgb(166, 166, 166);
+}
+
+.container{
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/*header---*/
+.header{
+  width: 100%;
+  position: fixed;
+  border-bottom:2px solid white;
+  height: 95px;
+  transition: ease all 1s;
+  -webkit-transition: ease all 1s;
+  -moz-transition: ease all 1s;
+  -o-transition: ease all 1s;
+  z-index: 11;
+}
+
+.header-efek-scroll{
+  background-color: rgb(0, 1, 26);
+  height: 75px;
+}
+
+.nav-efek-scroll{
+  line-height: 75px;
+}
+/*home-----*/
+#home{
+  background-image: url("images/cover.jpg");
+  background-size: cover;
+  height: 675px;
+  margin-bottom: 9px;
+  background-attachment: fixed;
+}
+
+.cover {
+    display: flex;
+    align-content: center;
+    flex-wrap: nowrap;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    height: 672px;
+    flex-direction: column;
+}
+
+.cover h1, .cover a{
+  color: white;
+}
+.cover h1{
+  font-size: 55px;
+}
+
+.cover a{
+  margin-top: 45px;
+  font-size: 25px;
+  padding: 15px 25px;
+  background-color: #000119;
+  border-radius: 3px;
+}
+
+
+.logo {
+    color: white;
+    font-size: 25px;
+    float: left;
+    line-height: 95px;
+    margin-left: 25px;
+    transition: ease all 1s;
+    -webkit-transition: ease all 1s;
+    -moz-transition: ease all 1s;
+    -o-transition: ease all 1s;
+}
+
+.logo-efek-scroll{
+  line-height: 75px;
+}
+
+nav {
+    float: right;
+    line-height: 95px;
+    margin-right: 25px;
+    transition: ease all 1s;
+    -webkit-transition: ease all 1s;
+    -moz-transition: ease all 1s;
+    -o-transition: ease all 1s;
+}
+
+nav a {
+    color: white;
+    padding: 15px 25px;
+    font-size: 19px;
+}
+
+nav a:hover{
+  background-color: rgb(0, 1, 26);
+  border-radius: 3px;
+}
+
+
+.cover h4 {
+    margin-top: 15px;
+    font-size: 21px;
+    color: rgb(170, 170, 170);
+}
+
+.cover h5 {
+    margin-top: 45px;
+    color: rgb(0, 1, 26);
+    font-size: 21px;
+}
+
+a.button-arah {
+    margin-top: 15px;
+}
+
+
+#personal-data {
+    /* background-color: white; */
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.gambar-bulat {padding: 15px;display: flex;justify-content: center;background-color: white;margin-top: 5px;}
+
+.gambar-bulat img {
+    width: 150px;
+    height: 200px;
+    border-radius: 50%;
+    border: 7px solid  rgb(0, 1, 26);
+}
+
+
+.judul {
+    background-color: white;
+    text-align: center;
+    padding: 15px;
+    color: rgb(0, 1, 26);
+}
+
+
+.kolom-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.data-personal {
+    /* flex-grow: 1; */
+    width: 49%;
+    background-color: white;
+    margin-top: 5px;
+    /* padding: 25px; */
+    height: auto;
+}
+
+
+.data-kiri {
+    padding: 25px 25px 25px 175px;
+}
+
+.data-kanan {
+    padding: 25px 175px 25px 25px;
+}
+
+
+span {
+    display: block;
+    margin-bottom: 15px;
+}
+
+
+.education-list {
+    width: 20%;
+    padding: 15px;
+    /* display: flex; */
+}
+
+.kolom-education {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.education-list img {
+    width: 100px;
+    margin: 0 auto;
+    display: block;
+}
+
+.education-list h3 {
+    text-align: center;
+}
+
+.education-list p {
+    text-align: center;
+}
+
+
+.kontak-list img {
+    float: left;
+    width: 40px;
+    margin-right: 15px;
+}
+
+
+.kontak-list p {
+    line-height: 45px;
+}
+
+
+.kolom-2 {
+    width: 50%;
+    float: left;
+}
+
+.skill{
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.kolom-skill{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.skill-list{
+  width: 15%;
+  padding: 15px;
+}
+
+
+.skill-list img {
+    width: 110px;
+    display: block;
+    margin: 15px auto;
+}
+
+.skill h6 {
+    font-size: 21px;
+    margin-left: 15px;
+}
+
+
+.skill-list hr {border: 3px solid rgb(0, 1, 26);}
+
+.skill-list p {margin-top: 5px;font-weight: bold;}
+
+
+.judul-item {
+    margin-bottom: 5px;
+    font-size: 21px;
+}
+
+div#skill {
+    margin-bottom: 15px;
+}
