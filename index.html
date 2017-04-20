@@ -6,7 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Raja Arif Fadillah SItompul | Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mygallery.css">
   <link rel="stylesheet" href="aos.css">
+  <!-- <link rel="stylesheet" href="mygallery.css"> -->
+
 </head>
 <body>
 
@@ -14,12 +17,16 @@
   <header class="header">
     <div class="all-navigasi">
     <a class="logo">Raja Arif Fadillah Sitompul</a>
-    <nav>
+
+    <div class="burger-menu burger">
+      <img src="images/navburger.png" alt="">
+    </div>
+    <nav id="hide-menu">
       <a href="#home">Home</a>
       <a href="#personal-data">Personal Info</a>
       <a href="#education">Education</a>
       <a href="#skill">Skill</a>
-      <a href="#">Portfolio</a>
+      <a href="#portfolio">Portfolio</a>
     </nav>
     </div>
   </header>
@@ -29,10 +36,9 @@
   <div id="home">
     <div class="cover">
       <h1>Welcome To My Portfolio</h1>
-      <h4>I'm Raja Arif Fadillah Sitompul</h4>
+      <h3 id="typewriter"></h3>
       <a class="button-cv" href="#">Download My CV</a>
-      <h5>All About Me</h5>
-      <a class="button-arah" href="#">V</a>
+      <a href="#personal-data">All About Me</a>
     </div>
   </div>
 
@@ -103,7 +109,7 @@
 
       <div class="education-list">
         <img src="images/education.png" alt="">
-        <h3>Vocation High School</h3>
+        <h3>Senior High School</h3>
         <p>Smk Swasta Pemda Rantauprapat <br>2012-2015</p>
         <p>Networking And Computer Engineering</p>
       </div>
@@ -121,7 +127,7 @@
   <div id="skill">
     <h2  class="judul">Skill</h2>
     <div class="skill" data-aos="zoom-in">
-      <h6>Programming</h6>
+      <h6 class="subjudul">Programming</h6>
       <div class="kolom-skill">
         <div class="skill-list">
           <img src="images/html.png" alt="">
@@ -157,7 +163,7 @@
     </div>
   </div>
     <div class="skill" data-aos="zoom-in">
-      <h6>Desain</h6>
+      <h6 class="subjudul">Desain</h6>
       <div class="kolom-skill">
         <div class="skill-list">
           <img src="images/photoshop.png" alt="">
@@ -175,9 +181,52 @@
 
     </div>
   </div>
+
+  <div id="portfolio">
+    <h2  class="judul">Portfolio</h2>
+      <div class="gallery">
+        <h6 class="subjudul">Programming</h6>
+        <a href="images/website informasi.png" class="big" title="Website information with PHP">
+          <img src="images/tumb website informasi.png" alt="" title="Website information with PHP" data-aos="zoom-in">
+        </a>
+        <a href="images/toko online.png" class="big" title="Website toko online with PHP">
+          <img src="images/tumb toko online.png" alt="" title="Website toko online with PHP" data-aos="zoom-in">
+        </a>
+      </div>
+
+    <div >
+      <div class="gallery">
+        <h6 class="subjudul">Desain</h6>
+        <a href="images/raja.jpg" class="big" title="Cartoon face">
+          <img src="images/raja.jpg" alt="" title="Cartoon face" data-aos="zoom-in">
+        </a>
+        <a href="images/karsela1.jpg" class="big" title="Cartoon face">
+          <img src="images/karsela1.jpg" alt="" title="Cartoon face" data-aos="zoom-in">
+        </a>
+        <a href="images/simplesmudge.jpg" class="big" title="Cartoon face">
+          <img src="images/simplesmudge.jpg" alt="" title="Cartoon face" data-aos="zoom-in">
+        </a>
+        <a href="images/winda.jpg" class="big" title="Caricature Digital">
+          <img src="images/winda.jpg" alt="" title="Caricature Digital" data-aos="zoom-in">
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="quote">
+    <h2>"Keep Learning And Keep Working"</h2>
+  </div>
+
+  <div class="footer">
+    <p>&copy Copyright Raja Arif Fadillah Sitompul, 2017</p>
+  </div>
+
   <script type="text/javascript" src="plugin/jquery.min.js">  </script>
   <script type="text/javascript" src="plugin/jquery.parallax-1.1.3.js">  </script>
   <script type="text/javascript" src="plugin/aos.js">  </script>
+  <script type="text/javascript" src="plugin/mygallery.js">  </script>
+  <script type="text/javascript" src="plugin/jquery.typewriter.js">  </script>
   <script type="text/javascript">
     $("#home").parallax("50%", 0.5);
 
@@ -195,6 +244,50 @@
     });
 
     AOS.init();
+
+    $(document).ready(function(){
+      $(".gallery").mygallery({grid : 4});
+
+      $(".burger").click(function(){
+        $("#hide-menu").toggleClass("menu-open");
+      });
+
+    });
+
+    $(function(){
+      $('nav a[href^="#"]').on('click', function(e){
+        $target = $(this.hash);
+        $jarak = 0;
+        $('html, body').stop().animate({
+          'scrollTop' : $target.offset().top - $jarak }, 800, 'swing',
+          function(){
+            window.location.hash;
+          }
+        );
+      });
+    });
+    $(function(){
+      $('.cover a[href^="#"]').on('click', function(e){
+        $target = $(this.hash);
+        $jarak = 0;
+        $('html, body').stop().animate({
+          'scrollTop' : $target.offset().top - $jarak }, 800, 'swing',
+          function(){
+            window.location.hash;
+          }
+        );
+      });
+    });
+
+
+
+    $('#typewriter').typewriter({
+      text: ["Hai !!!", "I'm Raja Arif Fadillah Sitompul", "I'm a Junior Web Developer", "And I'm a Graphic Designer"],
+      typeDelay: 100,
+      waitingTime: 100,
+      prefix: "$~ ",
+      blinkSpeed : 100,
+    });
 
   </script>
 </body>

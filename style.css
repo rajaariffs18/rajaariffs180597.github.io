@@ -43,6 +43,21 @@ body{
 .nav-efek-scroll{
   line-height: 75px;
 }
+
+.burger-menu{
+  display: block;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
+
+.burger{
+  display: none;
+}
+
+.screen{
+  display: none;
+}
 /*home-----*/
 #home{
   background-image: url("images/cover.jpg");
@@ -78,6 +93,15 @@ body{
   border-radius: 3px;
 }
 
+.cover a:hover{
+  background-color: white;
+  color: #000119;
+}
+
+#typewriter-text{
+  color: #000119;
+  font-size: 21px;
+}
 
 .logo {
     color: white;
@@ -116,6 +140,22 @@ nav a:hover{
   border-radius: 3px;
 }
 
+.nav-efek-scroll a:hover{
+  background-color: white;
+  color: rgb(0, 1, 26);
+}
+
+.active{
+  background-color: white;
+  color : rgb(0, 1, 26);
+}
+
+/*nav a:visited{
+  background-color:white;
+  color: rgb(0, 1, 26);
+  border-radius: 3px;
+}*/
+
 
 .cover h4 {
     margin-top: 15px;
@@ -123,15 +163,7 @@ nav a:hover{
     color: rgb(170, 170, 170);
 }
 
-.cover h5 {
-    margin-top: 45px;
-    color: rgb(0, 1, 26);
-    font-size: 21px;
-}
 
-a.button-arah {
-    margin-top: 15px;
-}
 
 
 #personal-data {
@@ -175,15 +207,15 @@ a.button-arah {
 
 
 .data-kiri {
-    padding: 25px 25px 25px 175px;
+    padding: 25px 25px 25px 125px;
 }
 
 .data-kanan {
-    padding: 25px 175px 25px 25px;
+    padding: 25px;
 }
 
 
-span {
+.data-kiri span {
     display: block;
     margin-bottom: 15px;
 }
@@ -263,7 +295,7 @@ span {
     margin: 15px auto;
 }
 
-.skill h6 {
+.subjudul {
     font-size: 21px;
     margin-left: 15px;
 }
@@ -281,4 +313,153 @@ span {
 
 div#skill {
     margin-bottom: 15px;
+}
+
+
+.gallery {
+    background-color: white;
+    padding: 15px;
+    margin-top: 5px;
+    gallery
+}
+
+.gallery a:hover{
+  opacity: 0.7;
+}
+
+.quote h2{
+  text-align: center;
+  font-size: 25px;
+  color: white;
+  padding: 15px;
+}
+
+.footer {
+    width: 100%;
+    background-color: rgb(0, 1, 26);
+    height: 45px;
+}
+
+.footer p {
+    text-align: center;
+    color: white;
+    line-height: 45px;
+}
+
+@media only screen and (max-width: 1024px){
+
+  .burger{
+    display: block;
+    line-height: 45px;
+    padding-top: 5px;
+    margin-top: 0;
+  }
+
+  .burger-menu{
+    line-height: 45px;
+    top: 2px;
+  }
+
+  #hide-menu{
+    max-height: 0px;
+    overflow: hidden;
+  }
+
+  .menu-open{
+    max-height: 100% !important;
+  }
+
+  .header{
+    height: 55px;
+  }
+
+  nav{
+    width: 100%;
+    margin-right : 0;
+    margin-top: 11px;
+  }
+
+  .logo{
+    line-height: 45px;
+  }
+
+  nav a{
+    display: block;
+    float: none;
+    background-color: rgb(0, 1, 26);
+    padding: 10px;
+    text-align: center;
+    font-size: 15px;
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 2px solid white;
+  }
+
+  .nav-efek-scroll{
+    line-height: 45px;
+  }
+
+  .cover h1{
+    font-size: 45px;
+  }
+
+  .cover a{
+    font-size: 16px;
+    padding: 9px;
+  }
+
+  .education-list {
+      width: 45%;
+      padding: 15px;
+      /* display: flex; */
+  }
+
+  .skill-list{
+    width: 45%;
+    padding: 15px;
+  }
+
+  .data-personal {
+      /* flex-grow: 1; */
+      width: 100%;
+      background-color: white;
+      margin-top: 5px;
+      /* padding: 25px; */
+      height: auto;
+  }
+
+  .data-kiri{
+    display: block;
+    padding: 15px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .data-kiri span {
+      margin: 0 auto;
+  }
+
+  .kontak-list{
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid gray;
+  }
+
+   .kontak-list img{
+     display: block;
+     float: none;
+     margin: 5px auto;
+   }
+
+  .data-kanan{
+    padding: 0px;
+  }
+
+
+}
+
+@media only screen and (max-width: 708px){
+    .cover h1{
+      font-size: 35px;
+    }
 }
