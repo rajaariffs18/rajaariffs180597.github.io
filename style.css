@@ -458,8 +458,12 @@ div#skill {
 
 }
 
-@media only screen and (max-width: 708px){
-    .cover h1{
+@media only screen and (max-width: 428px){
+  .logo{
+    font-size:21px;
+  } 
+  
+  .cover h1{
       font-size: 35px;
     }
 }
